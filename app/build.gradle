@@ -20,8 +20,8 @@ android {
 
     productFlavors {
         sandbox {
-            buildConfigField "String", "BASE_URL", "\"http://api.stg.kindis.co/payment/\""
-            buildConfigField "String", "CLIENT_KEY", "\"VT-client-j27iOlM_x8GU3PFf\""
+            buildConfigField "String", "BASE_URL", "\"http://api.klasio.dev.codigo.id/api/Cart/\""
+            buildConfigField "String", "CLIENT_KEY", "\"VT-client-5Mp0juvz1piVys5i\""
         }
 
         /*production {
