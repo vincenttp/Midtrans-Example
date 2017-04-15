@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "midtrans.codigo.midtrans"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        sandbox {
+            buildConfigField "String", "BASE_URL", "\"http://api.stg.kindis.co/payment/\""
+            buildConfigField "String", "CLIENT_KEY", "\"VT-client-j27iOlM_x8GU3PFf\""
+        }
+
+        /*production {
+            buildConfigField "String", "BASE_URL", "\"http://api.stg.kindis.co/\""
+            buildConfigField "String", "CLIENT_KEY", "\"VT-CLIENT-production-client-key\""
+        }*/
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.midtrans:uikit:1.5.1-SANDBOX'
+}
