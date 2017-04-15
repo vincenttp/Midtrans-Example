@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="midtrans.codigo.midtrans.CoreKit">
+    tools:context="midtrans.codigo.midtrans.UiKitCustom">
 
     <Button
         android:id="@+id/credit"

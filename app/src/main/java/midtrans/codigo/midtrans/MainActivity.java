@@ -1,33 +1,24 @@
 package midtrans.codigo.midtrans;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.midtrans.sdk.corekit.callback.CheckoutCallback;
-import com.midtrans.sdk.corekit.callback.TransactionCallback;
 import com.midtrans.sdk.corekit.callback.TransactionFinishedCallback;
-import com.midtrans.sdk.corekit.core.Constants;
 import com.midtrans.sdk.corekit.core.LocalDataHandler;
 import com.midtrans.sdk.corekit.core.MidtransSDK;
-import com.midtrans.sdk.corekit.core.PaymentMethod;
-import com.midtrans.sdk.corekit.core.SdkCoreFlowBuilder;
 import com.midtrans.sdk.corekit.core.TransactionRequest;
 import com.midtrans.sdk.corekit.models.CustomerDetails;
 import com.midtrans.sdk.corekit.models.ItemDetails;
-import com.midtrans.sdk.corekit.models.TransactionResponse;
 import com.midtrans.sdk.corekit.models.UserAddress;
 import com.midtrans.sdk.corekit.models.UserDetail;
 import com.midtrans.sdk.corekit.models.snap.CreditCard;
-import com.midtrans.sdk.corekit.models.snap.Token;
 import com.midtrans.sdk.corekit.models.snap.TransactionResult;
 import com.midtrans.sdk.uikit.SdkUIFlowBuilder;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -108,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 MidtransSDK.getInstance().startPaymentUiFlow(this);
                 break;
             case R.id.corekit:
-                Intent intent = new Intent(this, CoreKit.class);
+                Intent intent = new Intent(this, UiKitCustom.class);
                 startActivity(intent);
         }
     }

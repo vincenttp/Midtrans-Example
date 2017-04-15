@@ -33,7 +33,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class CoreKit extends AppCompatActivity implements View.OnClickListener {
+public class UiKitCustom extends AppCompatActivity implements View.OnClickListener {
     Button credit, tcash, bank, mandiri, permata;
     MidtransSDK midtransSDK;
     TransactionRequest transactionRequest;
